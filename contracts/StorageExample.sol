@@ -6,14 +6,14 @@ pragma solidity ^0.8.0;
 
 import "hardhat/console.sol";
 
-contract SimpleStorage {
-    uint storedData;
+contract StorageExample {
+    uint storedData = 0;
 
     function set(uint x) public {
         storedData = x;
     }
 
-    function get() public view returns (uint) {
+    function getBalance() public view returns (uint) {
         return storedData;
     }
 }
