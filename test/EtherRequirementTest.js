@@ -21,7 +21,6 @@ describe('EtherRequirement', function () {
     });
 
 
-
     it('should revert when performing action with incorrect amount of Ether', async function () {
         await expect(etherRequirement.connect(user).performAction({ value: ethers.parseEther('0.5') })
     ).to.be.revertedWith('Exact amount of Ether required');
